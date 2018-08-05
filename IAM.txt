@@ -9,6 +9,14 @@ Allows you to manage users and their level of access to AWS console.
 	Temporary access to users/devices and services as necessary. 
 	Setup own password rotation policy. 
 
+	IAM is universal and does not apply to region. 
+	New users have no permissions when they are first created. 
+	Users are assigned Access Key ID and secret access key ID when first created. 
+	These are not same as password and cannot be used to login to management console. 
+	However, these can be used to access AWS via API and CLI.
+
+MFA - Multi-factor Authentication 
+
 
 
 
