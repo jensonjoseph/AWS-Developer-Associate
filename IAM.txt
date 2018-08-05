@@ -1,1 +1,35 @@
-Identity Access Management.
+Identity And Access Management.
+
+Allows you to manage users and their level of access to AWS console. 
+	Centralized control of AWS account. 
+	Shared access to AWS account. create users and groups and allow or deny access to AWS resources.
+	Granular permissions. 
+	Identity federation (use credentials stored in linkedin, fb..)
+	Multi factor authentication (e.g username password and then token)
+	Temporary access to users/devices and services as necessary. 
+	Setup own password rotation policy. 
+
+
+
+
+Amazon tutorial:
+	User 	: Operator	(Permanent set of credentials), is authentication method
+	Group 	: 
+	Role 	: Not permissions, but, Authentication method. Credentials with role are Temporary.
+	Policy Document	: Permissions. Is a JSON document that can be attached directly to a user/ group/ role. 
+
+	sample policy document :
+	{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:List*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
