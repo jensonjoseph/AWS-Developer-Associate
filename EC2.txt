@@ -1,0 +1,43 @@
+Elastic Compute Cloud
+(Virtual server on cloud)
+
+Options:
+	On demand	: Fixed rate by hour or by second. No commitment. 
+	Reserved	: 1 or 3 year | Predictable usage. Upfront payment for maximum discount. "Standard, Convertible, Scheduled"
+	Spot		: Bidding. Flexible start and end time. (If a Spot instance is terminated by EC2, you will not be charged for partial hour of usage. However, if you terminate the instance yourself, you will be charged for the complete hour in which the instance ran)
+	Dedicated hosts: Physical EC2 servers dedicated for use. Regulatory requirements. Avoid Multi-tenancy.
+
+	FIGHTDRMCPX
+
+EBS: Elastic block storage 
+(Virtual disk on cloud)
+	
+	SSD
+		General purpose SSD (GP2) : 3IOPS per GB. Upto 10,000 IOPS and ability to Burst upto 3000 IOPS for extended periods of time for volumes at 3334 GiB and above. 
+		Provisioned IOPS SSD(IO1) : Designed for I/O intensive applications such as large relational or NoSQL databases. Use if you need more than 10,000 IOPS. Can provision upto 20,000 IOPS
+	
+	Magnetic
+		Throughput Optimized HDD (ST1): Magnetic disk | Cannot be a boot volume | Used for Big Data, Data warehouse, Log processing
+		Cold HDD(SC1):	Lowest cost storage for infrequent accessed workloads | e.g File server | Cannot be a boot volume
+		Magnetic : Lowest per gigabyte, bootable. Ideal for workloads where data is accessed infrequently and lowest storage cost is important. 
+
+Hands on 
+
+AMI: Amazon Machine Image
+
+ssh ec2-user@54.211.5.93 -i MyNewKeyPair.pem
+
+yum update -y
+
+service httpd start
+
+chkconfig httpd on
+
+service httpd status
+
+[root@ip-172-31-84-135 ec2-user]# cd /var/www/html/
+nano index.html
+
+
+
+

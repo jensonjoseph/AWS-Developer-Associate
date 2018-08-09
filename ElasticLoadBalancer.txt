@@ -1,0 +1,13 @@
+Elastic load balancer (https://aws.amazon.com/elasticloadbalancing/)
+Types of load balancers
+	Application load balancer
+	Network load balancer
+	Classic load balancer 
+
+Load balancer errors:
+	504 :	Application stop responding (Web server / database layer)
+
+X-Forwarded-For Header
+	EC2 uses X-Forwarded-For header to look for IP (IPv4)address of end-user. 
+	By default EC2 sees the private IIP address of Load balancer.
+
